@@ -33,7 +33,6 @@ jobs:
         name: app
         path: |
           dist/
-          bun.lockb
 
     - name: Persist package
       uses: actions/download-artifact@v4
