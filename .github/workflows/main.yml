@@ -33,7 +33,6 @@ jobs:
         name: app
         path: |
           dist/
-          package-lock.json
 
     - name: Persist package
       uses: actions/download-artifact@v4
