@@ -40,12 +40,15 @@ jobs:
         name: check-digit
         path: |
           dist
-
+          
+    - name: Change directory to dist
+      run: cd ./dist
+      
     - name: Publish application
       uses: deka0106/upload-to-dropbox@v2
       with:
         dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
-        src: dist/**/*
-        dest: /check-digit/
+        src: /**/*
+        dest: /
         mode: overwrite
         multiple: true
