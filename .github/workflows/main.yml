@@ -49,8 +49,11 @@ jobs:
       with:
         dropbox_access_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
         src: |
-          /*
-          /assets/*
+          assets/*
+          favicon.ico
+          index.html
+          placeholder.svg
+          robots.txt
         dest: /
         mode: overwrite
         multiple: true
